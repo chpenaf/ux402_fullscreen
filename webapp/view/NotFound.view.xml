@@ -1,0 +1,6 @@
+<mvc:View controllerName="christian.com.sap.training.ux402.fullscreen.ux402fullscreen.controller.NotFound"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <IllustratedMessage illustrationType="sapIllus-PageNotFound">
+    </IllustratedMessage>
+</mvc:View>
