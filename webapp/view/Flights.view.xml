@@ -1,6 +1,7 @@
 <mvc:View controllerName="christian.com.sap.training.ux402.fullscreen.ux402fullscreen.controller.Flights"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m" xmlns:l="sap.ui.layout">
+    xmlns="sap.m" xmlns:l="sap.ui.layout"
+    xmlns:cust="christian/com/sap/training/ux402/fullscreen/ux402fullscreen/control">
     <Page id="idFlightsPage"
           navButtonPress="onNavBack"
           showNavButton="true" 
@@ -43,6 +44,9 @@
                     <Column  id="column4" hAlign="Right">
                         <Text id="text4" text="{i18n>seatocc}" />
                     </Column>
+                    <Column id="column5" minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                        <Text id="text8" text="{i18n>bookaction}" />
+                    </Column>
                 </columns>
                 <items>
                     <ColumnListItem id="columnListItem1">
@@ -53,6 +57,11 @@
                             <Text id="text5" text="{path: 'Fldate', type: 'sap.ui.model.type.Date'}" />
                             <Text id="text6" text="{Seatsmax}" />
                             <Text id="text7" text="{Seatsocc}" />
+                            <cust:HoverButton id="hoverButton1" 
+                                              text="{i18n>bookaction}"
+                                              allowHover="true"
+                                              hoverText="{=${Seatsmax} - ${Seatsocc}}"
+                                              hover="onHover" />
                         </cells>
                     </ColumnListItem>
                 </items>
